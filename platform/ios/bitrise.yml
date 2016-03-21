@@ -30,7 +30,7 @@ workflows:
             #!/bin/bash
 
             gem install jazzy --no-rdoc --no-ri
-            make ipackage-sim
+            JOBS=1 make ipackage-sim
         - is_debug: 'yes'
     - xcode-test:
         title: Run Xcode Tests
